@@ -1,0 +1,96 @@
+GIT Configuration
+==================
+Once GIT Installation done in our System,
+
+-> The first thing we need to do is set our username and the email address.
+
+-> This is because when we use git to change the files in the project.
+Git uses this information to identify who has made the changes to the file.
+
+-> The command to add the username and address is Git Config.
+
+Git uses a Series of configuration files to determine the Behaviour.
+
+Git has multiple levels of Configuration:
+=========================================
+	
+---> System Level (Git Installation)
+	This is the highest level of config and applies to all Users on the system.
+
+System Level Configuration Location:
+   /usr/local/etc/gitconfig ---- (Linux)
+   C:\ProgramFiles\Git\Config ---- (Windows)
+
+---> Global Level (User Account)
+	This level applies to the current user only.
+
+Global Level Configuration Location:
+ ~/.gitconfig -----(Linux)
+ C:\Users\<username>\.gitconfig --- (Windows)
+
+---> Local Level (Repository/Project Level)
+   This level applies to a specific repository only.
+Local Level Configuration Location:
+ .git/config --- (Windows)
+
+
+
+NOTE: The heirarchy of identify the username and email has follows,
+      Git identifies the username and email first local level if exits it will take,
+      If not then check at Global level, If it is not there finally it checks at System        Level.
+
+Git Configuration file Locations:
+=================================
+
+--> System Level (Git Installation)
+  
+
+-->Global Level (User Account Level)
+  Location: users/kiran/.git/config
+
+--> Local Level (Repository/Project Level)
+  Location: repository/.git/config
+
+
+git config command:
+===================
+You can view and edit the Git Configuration settings using the git config command.
+
+---> git config --system --list
+
+List system level configuration settings.
+
+---> git config --global --list
+
+List global level configuration settings.
+
+---> git config --local --list
+
+List local level configuration settings.
+
+To add a username and email address in Git, you can use the following commands,
+
+1. Set your Username
+ 
+ git config --global user.name "yourname"
+
+2. Set your email address
+ git config --global user.email "your email ID"
+
+
+TO list the remote repositories along with their URL's:
+========================================================
+
+   git remote -v 
+
+To Add a New Remote Repository :
+================================
+git remote add reponame repourl
+
+To Remove a Remote Repository:
+==============================
+git remote remove reponame
+
+
+
+
